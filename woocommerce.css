@@ -1639,6 +1639,12 @@ textarea {
   text-align: center;
 }
 
+.site-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .woocommerce-breadcrumb {
   display: none;
 }
