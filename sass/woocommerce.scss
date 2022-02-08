@@ -144,11 +144,11 @@ $woocommerce__color-info: #3d9cd2;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     gap: 50px;
     color: #411180;
     .woocommerce-product-gallery{
-      width: 35%;
+      width: 30%;
       min-width: 385px;
     }
     .entry-summary{
@@ -215,6 +215,11 @@ $woocommerce__color-info: #3d9cd2;
     display: none;
   }
   .reviews_tab{
+    a{
+      color: #411180;
+    }
+  }
+  .additional_information_tab{
     a{
       color: #411180;
     }
