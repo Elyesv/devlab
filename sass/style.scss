@@ -101,7 +101,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 @import "utilities/alignments";
 
+
 @import "page/category";
 @import "page/footer";
 @import "page/header";
 @import "page/single-product";
+@import "page/404";
+@import "page/account";
+@import "page/index";
+@import "page/contact";
+@import "page/boutique";
+@import "page/cart";
