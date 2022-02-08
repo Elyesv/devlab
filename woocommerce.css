@@ -1406,12 +1406,12 @@ p.no-comments {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   gap: 50px;
   color: #411180;
 }
 .single .product .woocommerce-product-gallery {
-  width: 35%;
+  width: 30%;
   min-width: 385px;
 }
 .single .product .entry-summary {
@@ -1473,6 +1473,9 @@ p.no-comments {
   display: none;
 }
 .single .reviews_tab a {
+  color: #411180;
+}
+.single .additional_information_tab a {
   color: #411180;
 }
 .single .woocommerce-noreviews {
