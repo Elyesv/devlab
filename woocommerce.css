@@ -1399,6 +1399,9 @@ p.no-comments {
   flex-wrap: wrap;
   justify-content: center;
 }
+.site-main .woocommerce-info {
+  background-color: transparent;
+}
 
 .woocommerce-breadcrumb {
   display: none;
@@ -1458,6 +1461,17 @@ p.no-comments {
 }
 .products li.product a.product_type_simple {
   display: none;
+}
+
+.cart {
+  justify-content: flex-start;
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+.cart .cart-empty {
+  border-top: 1px solid #B49DCC;
+  padding: 4% 0;
 }
 
 .site-footer {
