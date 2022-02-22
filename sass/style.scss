@@ -100,7 +100,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
-
 /* Woocommerce
 --------------------------------------------- */
 @import "woocommerce.scss";
@@ -375,9 +374,3 @@ body{
 	}
 }
 //end responsive tablette
-
-
-
-.site-main, .widget-area, footer{
-	display: none;
-}
