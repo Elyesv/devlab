@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="stylesheet" href="woocommerce.css">
+	<link rel="stylesheet" href='woocommerce.css'>
 
 	<?php wp_head(); ?>
 </head>
@@ -30,31 +30,42 @@
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$pour_lamoure_des_goodies_description = get_bloginfo( 'description', 'display' );
-			if ( $pour_lamoure_des_goodies_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $pour_lamoure_des_goodies_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+			?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pour_lamoure_des_goodies' ); ?></button>
-			<?php
+		
+		<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
+					'theme_location' => 'menu-nav-header',
+					'menu_id'        => 'header-left',
+
 				)
 			);
-			?>
-		</nav><!-- #site-navigation -->
+		?><!--  -->
+		
+		<div class="rightSide">
+			<form class="searchBar">
+				<input type="text" class="searchZone" placeholder="Seach something...">
+				<button type="submit">
+				<svg xmlns="http://www.w3.org/2000/svg" width="29.692" height="29.697" viewBox="0 0 29.692 29.697">
+  					<path id="Icon_awesome-search" data-name="Icon awesome-search" d="M29.288,25.675l-5.782-5.782a1.391,1.391,0,0,0-.986-.406h-.945a12.058,12.058,0,1,0-2.088,2.088v.945a1.391,1.391,0,0,0,.406.986l5.782,5.782a1.386,1.386,0,0,0,1.966,0l1.641-1.641a1.4,1.4,0,0,0,.006-1.972ZM12.063,19.487a7.424,7.424,0,1,1,7.424-7.424A7.419,7.419,0,0,1,12.063,19.487Z" fill="#fff"/>
+				</svg>
+
+				</button>
+			</form><!-- .searchBar -->
+			
+			<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-nav-logo-header',
+						'menu_id'        => 'header-right',
+
+					)
+				);
+				?><!--  -->
+			
+		</div><!-- .rightSide -->
+		
+		
 	</header><!-- #masthead -->
