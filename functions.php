@@ -50,6 +50,8 @@ function pour_lamoure_des_goodies_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'pour_lamoure_des_goodies' ),
+			'menu-nav-header' => 'header-left',
+			'menu-nav-logo-header' => 'header-right',
 		)
 	);
 
