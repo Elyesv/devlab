@@ -4,6 +4,8 @@ Theme Name: Pour l\'amour des goodies
 WooCommerce styles override
 */
 
+
+
 // WooCommerce color variables
 $woocommerce__color-error: #e2401c;
 $woocommerce__color-success: #0f834d;
@@ -41,3 +43,217 @@ $woocommerce__color-info: #3d9cd2;
  * WooCommerce widgets
  */
 @import "plugins/woocommerce/widgets";
+
+
+
+.site-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .woocommerce-info {
+    background-color: transparent;
+  }
+}
+
+.woocommerce-breadcrumb {
+  display: none;
+}
+
+.woocommerce-products-header {
+  width: 100%;
+  .woocommerce-products-header__title {
+    text-align: center;
+    color: #411180;
+    width: 100%;
+    border-bottom: solid 2px #B49DCC;
+  }
+}
+
+
+.woof_products_top_panel_content, woof_products_top_panel, woocommerce-notices-wrapper, woocommerce-result-count, woocommerce-ordering {
+  display: none;
+}
+
+.woocommerce-result-count, .woocommerce-ordering {
+  display: none;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  width: 70%;
+  flex-wrap: wrap;
+  margin-top: 2%;
+
+  li.product {
+    width: 20% !important;
+    min-width: 268px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px #707070;
+    padding: 1% 0;
+    margin-right: 0 !important;
+
+    a.woocommerce-LoopProduct-link {
+      text-decoration: none;
+
+      img {
+        min-width: 228px;
+      }
+      h2 {
+        text-align: left;
+        color: #7f7f7f;
+        font-size: 22px;
+        margin: 0;
+      }
+      span {
+        color: #7f7f7f;
+        font-size: 22px;
+      }
+    }
+    a.product_type_simple {
+      display: none;
+    }
+  }
+}
+
+.cart {
+  justify-content: flex-start;
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-top: 2%;
+
+  .cart-empty {
+    border-top: 1px solid #B49DCC;
+    padding: 4% 0;
+  }
+}
+
+.site-footer {
+  width: 100%;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.single{
+  .product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: #411180;
+    .woocommerce-product-gallery{
+      width: 30%;
+      min-width: 385px;
+    }
+    .entry-summary{
+      width: 70%;
+      min-width: 385px;
+      padding: 25px;
+    }
+    .woocommerce-product-gallery{
+      .flex-control-thumbs{
+        li{
+          width: 18% !important;
+        }
+      }
+    }
+    .woocommerce-product-gallery__image{
+      width: 100%;
+    }
+    .woocommerce-product-gallery__trigger{
+      display: none !important;
+    }
+    .summary{
+      width: 30%;
+    }
+    #tab-title-description{
+      display: none;
+    }
+    #tab-description{
+      display: none !important;
+    }
+    .woocommerce-tabs{
+      width: 90%;
+    }
+    .related{
+      display: none;
+    }
+    .cart{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .wc-stripe-product-checkout-container{
+        display: flex;
+        justify-content: center;
+      }
+      .single_add_to_cart_button{
+        background-color: #80738D;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        font-size: 12px;
+        padding: 15px 75px;
+        margin-top: 20px;
+        width: 250px;
+      }
+    }
+    .posted_in{
+      display: none;
+    }
+    .product_meta{
+      display: none;
+    }
+  }
+  .widget-area{
+    display: none;
+  }
+  .reviews_tab{
+    a{
+      color: #411180;
+    }
+  }
+  .additional_information_tab{
+    a{
+      color: #411180;
+    }
+  }
+  .woocommerce-noreviews{
+    background-color: #80738D;
+    color: white;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  .woocommerce-message{
+    background-color: lightgreen;
+    padding: 10px 30px;
+    display: flex;
+    flex-flow: wrap-reverse;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    a{
+      text-decoration: none;
+      color: black;
+      background-color: floralwhite;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-right: 10px;
+      text-align: center;
+    }
+  }
+}
+
+.woocommerce-breadcrumb{
+  display: none;
+}
+

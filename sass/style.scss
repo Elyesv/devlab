@@ -185,3 +185,276 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     text-align: center;
   }
 }
+
+//HEADER
+body{
+	overflow-x: hidden;
+	width: 100vw;
+}
+
+#masthead{
+	width: 100vw;
+	height: 16vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: #1A0733;
+	color: white;
+	.site-branding{
+		height: 50px;
+		width: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: white;
+
+	}
+	a{
+		color: white;
+		font: bolder;
+		font-size: 28px;
+		text-decoration: none;
+		&:hover{
+			color: #cbaef0;
+		}
+	}
+	.menu-header-left-container{
+		width: 22vw;
+		height: 50%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-left: -5vw;
+
+		ul{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-left: 2vw;
+
+			li{
+				width: 100%;
+				height: 50%;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				list-style: none;
+				margin-left: 6vw;
+				margin-right: 35px;
+				a{
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		
+
+	}
+	
+	.rightSide{
+		width: 60%;
+		height: 50%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.searchBar{
+			width: 60%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.searchZone{
+				width: 22vw;
+				background-color: transparent;
+				border: 0;
+				border-bottom: 2px solid rgba($color: #FFFF, $alpha: 0.4);
+				border-radius: 0;
+				color: white;
+				&:focus-visible{
+					outline: none;
+				}
+			}
+
+			button{
+				background-color: transparent;
+				border: 0;
+				cursor: pointer;
+			}
+		}
+		
+		
+		.menu-header-right-container{
+			width: 40%vw;
+			height: 50%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			flex-wrap: wrap;
+
+			ul{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-left: 2vw;
+
+				li{
+					width: 100%;
+					height: 50%;
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					list-style: none;
+					margin-left: 25px;
+					margin-right: 25px;
+					a{
+						width: 100%;
+						height: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+				}
+			}
+		}
+	}
+
+}
+//END HEADER
+
+//responsive tablette
+@media screen and (max-width : 1050px)
+{
+		#masthead{
+			width: 100vw;
+			a{
+				font-size: 18px;
+			}
+		
+		.rightSide{
+			margin-right: 0vw;
+			margin-left: 5vw;
+			.searchBar{
+				width: 70%;
+				.searchZone{
+					width: 250px;
+					::placeholder{
+						font-size: 16px;
+					}
+				}
+				button{
+					display: none;
+					svg{
+						display: none;
+					}
+				}
+			}
+			.menu-header-right-container{
+				width: 60%;
+				margin-right: 50px;
+			}
+		}
+		.menu-header-left-container{
+			width: 20%;
+			ul{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-left: 0px;
+			
+				li{
+					width: 100%;
+					height: 50%;
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					list-style: none;
+					margin-left: 15px;
+					margin-right: 15px;
+					a{
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+			
+		
+		}
+	}
+}
+//end responsive tablette
+
+//responsive mobile
+@media screen and (max-width : 500px)
+{
+		#masthead{
+			width: 100vw;
+			height: 20vh;
+			a{
+				font-size: 15px;
+			}
+		
+		.rightSide{
+			width: 100vw;
+			margin-right: 0vw;
+			margin-left: 3vw;
+			.searchBar{
+				width: 100%;
+				margin-left: -10vw;
+				margin-right: -22vw;
+				.searchZone{
+					width: 150px;
+					::placeholder{
+						font-size: 12px;
+					}
+				}
+				button{
+					display: none;
+				}
+			}
+			.menu-header-right-container{
+				width: 60%;
+				margin-right: 20px;
+			}
+		}
+		.menu-header-left-container{
+			width: 20%;
+			margin-right: 25vw;
+			ul{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-left: 0px;
+			
+				li{
+					width: 100%;
+					height: 50%;
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					list-style: none;
+					margin-left: 40px;
+					margin-right: 40px;
+					a{
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+			
+		
+		}
+	}
+}
+//end responsive tablette
+
