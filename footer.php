@@ -11,24 +11,51 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'pour_lamoure_des_goodies' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'pour_lamoure_des_goodies' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'pour_lamoure_des_goodies' ), 'pour_lamoure_des_goodies', '<a href="http://underscores.me/">TAU</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
+<footer class="footer">
+    <div class="footer-box">
+        <div class="footer-box-divider"></div>
+        <p class="footer-box-title">par-amour-des-goodies.com</p>
+        <p class="footer-box-content">© 2021 All rights Reserved. Site not affiliated with Automatic Inc.</p>
+    </div>
+    <div class="footer-box">
+        <div class="footer-box-divider"></div>
+        <p class="footer-box-title">developers</p>
+        <div class="footer-box-content">
+            <ul>
+                <li>Elyes Voisin</li>
+                <li>Florian Palvadeau</li>
+                <li>Louis Perrenot</li>
+                <li>Adel Khiter</li>
+                <li>Jarrel Folly-Adjon</li>
+                <li>Romain Gaboriau</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-box">
+        <div class="footer-box-divider"></div>
+        <p class="footer-box-title">follow us</p>
+        <?php
+        wp_nav_menu(
+            array(
+                'theme_location' => 'menu-footer-1',
+                'menu_id'        => 'menu-social-footer',
+            )
+        );
+        ?>
+    </div>
+    <div class="footer-box">
+        <div class="footer-box-divider"></div>
+        <p class="footer-box-title">do you have any questions ?</p>
+        <?php
+        wp_nav_menu(
+            array(
+                'theme_location' => 'menu-footer-2',
+                'menu_id'        => 'menu-contact-footer',
+            )
+        );
+        ?>
+    </div>
+</footer>
 
 </body>
 </html>
