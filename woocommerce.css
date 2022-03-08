@@ -959,6 +959,7 @@ textarea {
   border: solid 1px #707070;
   padding: 1% 0;
   margin-right: 0 !important;
+  margin-bottom: 2% !important;
 }
 .products li.product a.woocommerce-LoopProduct-link {
   text-decoration: none;
