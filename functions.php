@@ -47,11 +47,13 @@ function pour_lamoure_des_goodies_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
-		array(
-			'menu-1' => esc_html__( 'Primary', 'pour_lamoure_des_goodies' ),
-		)
-	);
+    register_nav_menus(
+        array(
+            'menu-1' => esc_html__( 'Primary', 'pour_lamoure_des_goodies' ),
+            'menu-nav-header' => 'header-left',
+            'menu-nav-logo-header' => 'header-right',
+        )
+    );
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -182,3 +184,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+add_filter('wp_nav_menu_objects', function($items) {
+    foreach ($items as $item) {
+        $icon = get_field('icon', $item);
+
+        if ($icon) {
+            $item->title = '<i class="' . $icon . '"></i>';
+        }
+    }
+    return $items;
+});
