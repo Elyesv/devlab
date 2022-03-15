@@ -105,3 +105,166 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "page/footer";
 @import "page/header";
 @import "page/single-product";
+
+body{
+	overflow-x: hidden;
+	width: 100vw;
+}
+
+.site-main-index{
+	width: 100vw;
+	height: 45vh;
+	background-image: url(http://localhost/devlabb/wp-content/uploads/2022/03/Screenshot_1.png);
+	background-position: center;
+	background-size: cover;
+	p{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		font-size: 35px;
+		font-weight: bold;
+		z-index: 2;
+		color: white;
+	}
+}
+
+.site-secondary-index{
+	width: 100vw;
+	height: 40vh;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	background-image: url(http://localhost/devlabb/wp-content/uploads/2022/03/brush.png);
+	background-position: center;
+	background-size: 120%;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	.container{
+		width: 60vw;
+		height: 80%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		.leftPart{
+			width: 45%;
+			height: 100%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			.left{
+				width: 40%;
+				height: 100%;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				flex-direction: column;
+				.textArea{
+					margin-top: 10px;
+					height: 30%;
+					width: 100%;
+					display: flex;
+					justify-content: baseline;
+					align-items: flex-start;
+					flex-direction: column;
+					color: white;
+					.p1{
+						font-size: 14px;
+						margin-bottom: -2px;
+					}
+					.p2{
+						font-size: 20px;
+						font-weight: bold;
+						margin-bottom: 2px;
+					}
+					.p3{
+						font-size: 18px;
+						font-weight: 500;
+					}
+				}
+				.image{
+					width: 100%;
+					height: 30%;
+					background-color: white;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					img{
+						transform: scale(0.8);
+					}
+				}
+			}
+			.image{
+				margin-left: 10%;
+				width: 100%;
+				height: 80%;
+				background-color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+
+		.rightPart{
+			width: 47%;
+			height: 80%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: column;
+			.topContent{
+				width: 100%;
+				height: 40%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.image{
+					width: 57%;
+					height: 100%;
+					background-color: white;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				.image2{
+					width: 35%;
+					height: 100%;
+					background-color: white;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+			.bottomContent{
+				width: 100%;
+				height: 45%;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				.image{
+					background-color: white;
+					height: 100%;
+					width: 35%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				p{
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					color: white;
+					margin-top: 2%;
+					margin-left: 8%;
+					font-size: 14px;
+					width: 40%;
+					height: 100%;
+					text-align: left;
+				}
+			}
+		}
+	}
+}
