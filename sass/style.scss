@@ -106,10 +106,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "page/header";
 @import "page/single-product";
 
-body{
+body, #page{
 	overflow-x: hidden;
 	width: 100vw;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
 }
+
 
 .site-main-index{
 	width: 100vw;
@@ -131,17 +136,30 @@ body{
 }
 
 .site-secondary-index{
-	width: 100vw;
+	// width: 100vw;
+	// height: 40vh;
+	// margin-top: 5vh;
+	// margin-bottom: 5vh;
+	// background-image: url(http://localhost/devlabb/wp-content/uploads/2022/03/brush.png);
+	// background-position: center;
+	// background-size: 120%;
+	// background-repeat: no-repeat;
+	// display: flex;
+	// justify-content: space-around;
+	// align-items: center;
+
+	width: 70vw;
 	height: 40vh;
 	margin-top: 5vh;
 	margin-bottom: 5vh;
-	background-image: url(http://localhost/devlabb/wp-content/uploads/2022/03/brush.png);
+	background-color: rgba($color: #5f0ac0, $alpha: 0.6);
 	background-position: center;
 	background-size: 120%;
 	background-repeat: no-repeat;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 
 	.container{
 		width: 60vw;
@@ -263,6 +281,103 @@ body{
 					width: 40%;
 					height: 100%;
 					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+//responsive
+@include xl{
+	.site-secondary-index{
+		width: 70vw;
+		height: 70vh;
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+		background-color: rgba($color: #5f0ac0, $alpha: 0.6);
+		background-position: center;
+		background-size: 120%;
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	
+		.container{
+			width: 100%;
+			.rightPart{
+				.bottomContent{
+					p{	
+						width: 70%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include lg {
+	.site-secondary-index{
+		width: 60vw;
+		height: 70vh;
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+		background-color: rgba($color: #5f0ac0, $alpha: 0.6);
+		background-position: center;
+		background-size: 120%;
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	
+		.container{
+			width: 100%;
+			flex-direction: column;
+			.rightPart{
+				.bottomContent{
+					p{	
+						width: 100%;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include sm {
+	.site-secondary-index{
+		width: 80vw;
+		height: 70vh;
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+		background-color: rgba($color: #5f0ac0, $alpha: 0.6);
+		background-position: center;
+		background-size: 120%;
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	
+		.container{
+			width: 100%;
+			flex-direction: column;
+			.rightPart{
+				.bottomContent{
+					p{	
+						width: 100%;
+						font-size: 12px;
+					}
 				}
 			}
 		}
