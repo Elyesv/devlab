@@ -1,0 +1,47 @@
+.cart {
+  min-height: calc(100vh - 334px - 144.74px);
+
+  h1 {
+    font-weight: normal !important;
+  }
+}
+
+.product {
+  border-top: solid 2px #b49DCC;
+  border-bottom: solid 2px #b49DCC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+      margin: 0 !important;
+      color: #4E1499;
+    }
+
+    p {
+      margin: 0 !important;
+    }
+  }
+
+  .imgDelete {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    span {
+      a {
+        color: black;
+        font-size: 24px;
+      }
+    }
+    a {
+      display: flex;
+    }
+  }
+}
