@@ -1,0 +1,61 @@
+.u-columns {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  padding: 50px;
+  .u-column1 {
+    border-right: 1px solid #6e37b7;
+    @media screen and(max-width: 800px) {
+      border-right: none;
+      border-bottom: 1px solid #6e37b7;
+    }
+    a {
+      color: #6e37b7;
+    }
+  }
+  .u-column2 {
+    border-left: 1px solid #6e37b7;
+    @media screen and(max-width: 800px) {
+      border-left: none;
+      border-top: 1px solid #6e37b7;
+    }
+  }
+  > div {
+    width: 50%;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    h2 {
+      margin-bottom: 25px;
+    }
+    form {
+      width: 80%;
+      p {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+    .woocommerce-privacy-policy-text {
+      font-size: 12px;
+    }
+    button {
+      background-color: transparent;
+      color: #6e37b7;
+      border: 1px solid #6e37b7;
+      &:hover {
+        background-color: #6e37b7;
+        color: white;
+      }
+    }
+    .woocommerce-form-login__rememberme {
+      margin-bottom: 20px;
+    }
+  }
+}
+.widget-area {
+  display: none;
+}
