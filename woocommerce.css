@@ -1505,4 +1505,97 @@ textarea {
   display: none;
 }
 
+.woocommerce-MyAccount-navigation {
+  padding: 0 20px;
+}
+.woocommerce-MyAccount-navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+}
+.woocommerce-MyAccount-navigation ul li a {
+  padding: 5px 10px;
+  background-color: #80738d;
+  color: white;
+  text-decoration: none;
+}
+.woocommerce-MyAccount-navigation ul li a:hover {
+  background-color: #6e37b7;
+}
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--downloads {
+  display: none;
+}
+
+.woocommerce-MyAccount-content {
+  font-size: 16px;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+.woocommerce-MyAccount-content > p:nth-of-type(1) {
+  font-size: 24px;
+  text-align: center;
+}
+.woocommerce-MyAccount-content a {
+  color: #6e37b7;
+}
+
+.woocommerce-Address-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.woocommerce-orders-table thead th,
+.woocommerce-table--order-details thead th {
+  padding-bottom: 15px;
+}
+.woocommerce-orders-table td,
+.woocommerce-table--order-details td {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.woocommerce-order-details__title {
+  margin-bottom: 25px;
+}
+
+mark {
+  background: #6e37b7;
+  color: white;
+  padding: 0 5px;
+}
+
+.woocommerce-EditAccountForm span {
+  color: #6e37b7;
+}
+.woocommerce-EditAccountForm input {
+  outline: none;
+}
+.woocommerce-EditAccountForm fieldset {
+  border: 2px solid #6e37b7;
+  margin-bottom: 25px;
+}
+.woocommerce-EditAccountForm fieldset legend {
+  text-transform: uppercase;
+  padding: 0 10px;
+  color: #6e37b7;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.woocommerce-EditAccountForm fieldset p {
+  padding: 0 5px;
+}
+.woocommerce-EditAccountForm button {
+  padding: 5px 10px;
+  background-color: #80738d;
+  color: white;
+  text-decoration: none;
+}
+.woocommerce-EditAccountForm button:hover {
+  background-color: #6e37b7;
+}
+
 /*# sourceMappingURL=woocommerce.css.map */
