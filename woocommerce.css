@@ -1600,6 +1600,9 @@ textarea {
 }
 .single .product .woocommerce-product-gallery__image {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .single .product .woocommerce-product-gallery__trigger {
   display: none !important;
@@ -1725,6 +1728,10 @@ textarea {
   border-radius: 30px;
   margin-top: 15px;
   color: white;
+  text-decoration: none;
+}
+.uknown-btn:hover {
+  color: lightgrey;
 }
 
 .bigtitle {
@@ -1738,10 +1745,19 @@ textarea {
   }
 }
 
+.containerIndex {
+  overflow-x: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .site-main-index {
-  width: 100vw;
+  width: 100%;
   height: 45vh;
-  background-image: url(http://localhost/devlabb/wp-content/uploads/2022/03/Screenshot_1.png);
+  background-image: url(http://localhost/devlab/wp-content/uploads/2022/04/purple.png);
   background-position: center;
   background-size: cover;
 }
@@ -1758,7 +1774,7 @@ textarea {
 }
 
 .site-secondary-index {
-  width: 70vw;
+  width: 100%;
   height: 40vh;
   margin-top: 5vh;
   margin-bottom: 5vh;
@@ -1815,6 +1831,7 @@ textarea {
 .site-secondary-index .container .leftPart .left .textArea .p3 {
   font-size: 18px;
   font-weight: 500;
+  color: white;
 }
 .site-secondary-index .container .leftPart .left .image {
   width: 100%;
@@ -1897,7 +1914,7 @@ textarea {
 
 @media (max-width: 1280px) {
   .site-secondary-index {
-    width: 70vw;
+    width: 100%;
     height: 70vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
@@ -1919,7 +1936,7 @@ textarea {
 }
 @media (max-width: 1024px) {
   .site-secondary-index {
-    width: 70vw;
+    width: 100%;
     height: 80vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
