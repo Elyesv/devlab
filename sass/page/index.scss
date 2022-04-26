@@ -1,8 +1,18 @@
 
+
+.containerIndex{
+  overflow-x: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .site-main-index{
-  width: 100vw;
+  width: 100%;
   height: 45vh;
-  background-image: url(http://localhost/devlabb/wp-content/uploads/2022/03/Screenshot_1.png);
+  background-image: url(http://localhost/devlab/wp-content/uploads/2022/04/purple.png);
   background-position: center;
   background-size: cover;
   p{
@@ -19,7 +29,7 @@
 }
 
 .site-secondary-index{
-  width: 70vw;
+  width: 100%;
   height: 40vh;
   margin-top: 5vh;
   margin-bottom: 5vh;
@@ -72,6 +82,7 @@
           .p3{
             font-size: 18px;
             font-weight: 500;
+            color: white;
           }
         }
         .image{
@@ -169,7 +180,7 @@
 //responsive
 @include xl{
   .site-secondary-index{
-    width: 70vw;
+    width: 100%;
     height: 70vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
@@ -197,7 +208,7 @@
 
 @include lg {
   .site-secondary-index{
-    width: 70vw;
+    width: 100%;
     height: 80vh;
     margin-top: 5vh;
     margin-bottom: 5vh;

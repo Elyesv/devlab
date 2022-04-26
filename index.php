@@ -12,160 +12,86 @@
  * @package Pour_l\'amour_des_goodies
  */
 
+
+$assos = get_field("association", "options");
+
 get_header();
 ?>
 
-    <main class="site-main-index">
-        <p>Pour l'amour des goodies</p>
-    </main><!-- #main -->
+    <div class="containerIndex">
+        <main class="site-main-index">
+            <p>Pour l'amour des goodies</p>
+        </main><!-- #main -->
 
-    <div class="site-secondary-index">
-        <div class="container">
-            <div class="leftPart">
-                <div class="left">
-                    <div class="textArea">
-                        <p class="p1">Coup de coeur</p>
-                        <p class="p2">IIMPACT</p>
-                        <p class="p3">En voir plus →</p>
+        <?php foreach ($assos as $asso){
+
+            $args = array(
+                'post_type' => 'product',
+                'posts_per_page' => 5,
+                'product_cat' => $asso['nom'],
+            );
+
+            $articles = [];
+
+            $loop = new WP_Query( $args );
+            if ( $loop->have_posts() ) {
+                while ( $loop->have_posts() ) : $loop->the_post();
+                    array_push($articles, get_permalink(), get_the_post_thumbnail_url());
+                endwhile;
+            }
+            wp_reset_postdata();
+
+        ?>
+
+            <div class="site-secondary-index">
+            <div class="container">
+                <div class="leftPart">
+                    <div class="left">
+                        <div class="textArea">
+                            <p class="p1">Coup de coeur</p>
+                            <p class="p2"><?= $asso['nom'] ?></p>
+                            <a href="http://localhost/devlab/product-category/<?= $asso['nom'] ?>" class="p3">En voir plus →</a>
+                        </div>
+                        <a href="<?= $articles[0] ?>">
+                            <div class="image">
+                                <img src="<?= $articles[1] ?>"  alt="Article image">
+                            </div>
+                        </a>
                     </div>
-                    <div class="image">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/71pWzhdJNwL._AC_UL640_QL65_ML3_.png"  alt="Article image">
-                    </div>
+                    <a href="<?= $articles[2] ?>">
+                        <div class="image">
+                            <img src="<?= $articles[3] ?>" class="mainImg" alt="Main article image">
+                        </div>
+                    </a>
                 </div>
-                <div class="image">
-                    <img src="http://localhost/devlabb/wp-content/uploads/2022/03/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.png" class="mainImg" alt="Main article image">
+
+                <div class="rightPart">
+                    <div class="topContent">
+                        <a href="<?= $articles[4] ?>">
+                        <div class="image">
+                            <img src="<?= $articles[5] ?>" alt="Article image">
+                        </div>
+                        </a>
+                        <a href="<?= $articles[6] ?>">
+                            <div class="image2">
+                                <img src="<?= $articles[7] ?>" alt="Article image">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bottomContent">
+                        <a href="<?= $articles[8] ?>">
+                            <div class="image">
+                                <img src="<?= $articles[9] ?>" alt="Article image">
+                            </div>
+                        </a>
+                        <p><?= $asso['description'] ?></p>
+                    </div>
                 </div>
             </div>
+        </div><!-- #main -->
+        <?php }
+        ?>
 
-            <div class="rightPart">
-                <div class="topContent">
-                    <div class="image">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/61sbMiUnoGL._AC_UL640_QL65_ML3_.png" alt="Article image">
-                    </div>
-                    <div class="image2">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/71YXzeOuslL._AC_UY879_.png" alt="Article image">
-                    </div>
-                </div>
-                <div class="bottomContent">
-                    <div class="image">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/81fPKd-2AYL._AC_SL1500_.png" alt="Article image">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales ex lorem, non congue augue mattis vel. Aenean ornare scelerisque suscipit. Cras aliquam vestibulum pharetra</p>
-                </div>
-            </div>
-        </div>
-    </div><!-- #main -->
-
-    <div class="site-secondary-index">
-        <div class="container">
-            <div class="leftPart">
-                <div class="left">
-                    <div class="textArea">
-                        <p class="p1">Coup de coeur</p>
-                        <p class="p2">IIMPACT</p>
-                        <p class="p3">En voir plus →</p>
-                    </div>
-                    <div class="image">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/71pWzhdJNwL._AC_UL640_QL65_ML3_.png"  alt="Article image">
-                    </div>
-                </div>
-                <div class="image">
-                    <img src="http://localhost/devlabb/wp-content/uploads/2022/03/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.png" class="mainImg" alt="Main article image">
-                </div>
-            </div>
-
-            <div class="rightPart">
-                <div class="topContent">
-                    <div class="image">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/61sbMiUnoGL._AC_UL640_QL65_ML3_.png" alt="Article image">
-                    </div>
-                    <div class="image2">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/71YXzeOuslL._AC_UY879_.png" alt="Article image">
-                    </div>
-                </div>
-                <div class="bottomContent">
-                    <div class="image">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/81fPKd-2AYL._AC_SL1500_.png" alt="Article image">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales ex lorem, non congue augue mattis vel. Aenean ornare scelerisque suscipit. Cras aliquam vestibulum pharetra</p>
-                </div>
-            </div>
-        </div>
-    </div><!-- #main -->
-
-    <div class="site-secondary-index">
-        <div class="container">
-            <div class="leftPart">
-                <div class="left">
-                    <div class="textArea">
-                        <p class="p1">Coup de coeur</p>
-                        <p class="p2">IIMPACT</p>
-                        <p class="p3">En voir plus →</p>
-                    </div>
-                    <div class="image">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/71pWzhdJNwL._AC_UL640_QL65_ML3_.png"  alt="Article image">
-                    </div>
-                </div>
-                <div class="image">
-                    <img src="http://localhost/devlabb/wp-content/uploads/2022/03/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.png" class="mainImg" alt="Main article image">
-                </div>
-            </div>
-
-            <div class="rightPart">
-                <div class="topContent">
-                    <div class="image">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/61sbMiUnoGL._AC_UL640_QL65_ML3_.png" alt="Article image">
-                    </div>
-                    <div class="image2">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/71YXzeOuslL._AC_UY879_.png" alt="Article image">
-                    </div>
-                </div>
-                <div class="bottomContent">
-                    <div class="image">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/81fPKd-2AYL._AC_SL1500_.png" alt="Article image">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales ex lorem, non congue augue mattis vel. Aenean ornare scelerisque suscipit. Cras aliquam vestibulum pharetra</p>
-                </div>
-            </div>
-        </div>
-    </div><!-- #main -->
-
-    <div class="site-secondary-index">
-        <div class="container">
-            <div class="leftPart">
-                <div class="left">
-                    <div class="textArea">
-                        <p class="p1">Coup de coeur</p>
-                        <p class="p2">IIMPACT</p>
-                        <p class="p3">En voir plus →</p>
-                    </div>
-                    <div class="image">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/71pWzhdJNwL._AC_UL640_QL65_ML3_.png"  alt="Article image">
-                    </div>
-                </div>
-                <div class="image">
-                    <img src="http://localhost/devlabb/wp-content/uploads/2022/03/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.png" class="mainImg" alt="Main article image">
-                </div>
-            </div>
-
-            <div class="rightPart">
-                <div class="topContent">
-                    <div class="image">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/61sbMiUnoGL._AC_UL640_QL65_ML3_.png" alt="Article image">
-                    </div>
-                    <div class="image2">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/71YXzeOuslL._AC_UY879_.png" alt="Article image">
-                    </div>
-                </div>
-                <div class="bottomContent">
-                    <div class="image">
-                        <img src="http://localhost/devlabb/wp-content/uploads/2022/03/81fPKd-2AYL._AC_SL1500_.png" alt="Article image">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales ex lorem, non congue augue mattis vel. Aenean ornare scelerisque suscipit. Cras aliquam vestibulum pharetra</p>
-                </div>
-            </div>
-        </div>
-    </div><!-- #main -->
 
 <?php
 get_footer();
