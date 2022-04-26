@@ -69,21 +69,21 @@ do_action( 'woocommerce_before_cart' ); ?>
                             <p><?php echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ) ?></p>
                         </div>
                         <div class="imgDelete">
-                        <span>
-                            <?php
-                                echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-                                    'woocommerce_cart_item_remove_link',
-                                    sprintf(
-                                        '<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s"><i class="fas fa-trash-alt"></i></a>',
-                                        esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
-                                        esc_html__( 'Remove this item', 'woocommerce' ),
-                                        esc_attr( $product_id ),
-                                        esc_attr( $_product->get_sku() )
-                                    ),
-                                    $cart_item_key
-                                );
-                            ?>
-                        </span>
+                            <span>
+                                <?php
+                                    echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                                        'woocommerce_cart_item_remove_link',
+                                        sprintf(
+                                            '<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s"><i class="fas fa-trash-alt"></i></a>',
+                                            esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
+                                            esc_html__( 'Remove this item', 'woocommerce' ),
+                                            esc_attr( $product_id ),
+                                            esc_attr( $_product->get_sku() )
+                                        ),
+                                        $cart_item_key
+                                    );
+                                ?>
+                            </span>
                             <?php printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); ?>
                         </div>
                     </div>
@@ -98,14 +98,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<tr>
 				<td colspan="6" class="actions">
 
-					<?php if ( wc_coupons_enabled() ) { ?>
-						<div class="coupon">
-							<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
-							<?php do_action( 'woocommerce_cart_coupon' ); ?>
-						</div>
-					<?php } ?>
+<!--					--><?php //if ( wc_coupons_enabled() ) { ?>
+<!--						<div class="coupon">-->
+<!--							<label for="coupon_code">--><?php //esc_html_e( 'Coupon:', 'woocommerce' ); ?><!--</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="--><?php //esc_attr_e( 'Coupon code', 'woocommerce' ); ?><!--" /> <button type="submit" class="button" name="apply_coupon" value="--><?php //esc_attr_e( 'Apply coupon', 'woocommerce' ); ?><!--">--><?php //esc_attr_e( 'Apply coupon', 'woocommerce' ); ?><!--</button>-->
+<!--							--><?php //do_action( 'woocommerce_cart_coupon' ); ?>
+<!--						</div>-->
+<!--					--><?php //} ?>
 
-					<button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+					<button type="submit" class="button" name="update_cart" style="display: none" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 
@@ -137,3 +137,21 @@ do_action( 'woocommerce_before_cart' ); ?>
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
+
+<script>
+    var timeout;
+
+    jQuery( function( $ ) {
+        $('.woocommerce').on('change', 'input.qty', function(){
+
+            if ( timeout !== undefined ) {
+                clearTimeout( timeout );
+            }
+
+            timeout = setTimeout(function() {
+                $("[name='update_cart']").trigger("click");
+            }, 1000 ); // 1 second delay, half a second (500) seems comfortable too
+
+        });
+    } );
+</script>

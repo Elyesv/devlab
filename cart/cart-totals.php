@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
 	<table cellspacing="0" class="shop_table shop_table_responsive">
 
 		<tr class="cart-subtotal">
-			<th><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
+			<th><?php esc_html_e( 'Total avant TVA : ', 'woocommerce' ); ?></th>
 			<td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
@@ -40,18 +40,18 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php if ( WC()->cart->needs_shipping() && WC()->cart->show_shipping() ) : ?>
 
-			<?php do_action( 'woocommerce_cart_totals_before_shipping' ); ?>
+<!--			--><?php //do_action( 'woocommerce_cart_totals_before_shipping' ); ?>
+<!---->
+<!--			--><?php //wc_cart_totals_shipping_html(); ?>
 
-			<?php wc_cart_totals_shipping_html(); ?>
-
-			<?php do_action( 'woocommerce_cart_totals_after_shipping' ); ?>
+<!--			--><?php //do_action( 'woocommerce_cart_totals_after_shipping' ); ?>
 
 		<?php elseif ( WC()->cart->needs_shipping() && 'yes' === get_option( 'woocommerce_enable_shipping_calc' ) ) : ?>
 
-			<tr class="shipping">
-				<th><?php esc_html_e( 'Shipping', 'woocommerce' ); ?></th>
-				<td data-title="<?php esc_attr_e( 'Shipping', 'woocommerce' ); ?>"><?php woocommerce_shipping_calculator(); ?></td>
-			</tr>
+<!--			<tr class="shipping">-->
+<!--				<th>--><?php //esc_html_e( 'Shipping', 'woocommerce' ); ?><!--</th>-->
+<!--				<td data-title="--><?php //esc_attr_e( 'Shipping', 'woocommerce' ); ?><!--">--><?php //woocommerce_shipping_calculator(); ?><!--</td>-->
+<!--			</tr>-->
 
 		<?php endif; ?>
 
@@ -106,6 +106,27 @@ defined( 'ABSPATH' ) || exit;
 	<div class="wc-proceed-to-checkout">
 		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 	</div>
+    <?php do_action( 'woocommerce_cart_contents' ); ?>
+    <div>
+        <div class="actions">
+
+            <?php if ( wc_coupons_enabled() ) { ?>
+                <div class="coupon">
+                    <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
+                    <?php do_action( 'woocommerce_cart_coupon' ); ?>
+                </div>
+            <?php } ?>
+
+            <button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+
+            <?php do_action( 'woocommerce_cart_actions' ); ?>
+
+            <?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
+        </div>
+    </div>
+
+
+    <?php do_action( 'woocommerce_after_cart_contents' ); ?>
 
 	<?php do_action( 'woocommerce_after_cart_totals' ); ?>
 

@@ -6,42 +6,240 @@
   }
 }
 
-.product {
-  border-top: solid 2px #b49DCC;
-  border-bottom: solid 2px #b49DCC;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-
-  .info {
+.woocommerce-cart-form {
+  min-width: 35%;
+  .product {
+    border-top: solid 2px #b49DCC;
+    border-bottom: solid 2px #b49DCC;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
 
-    h1 {
-      margin: 0 !important;
-      color: #4E1499;
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      h1 {
+        margin: 0 !important;
+        color: #4E1499;
+      }
+
+      p {
+        margin: 0 !important;
+      }
     }
 
-    p {
-      margin: 0 !important;
+    .imgDelete {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      span {
+        a {
+          color: black;
+          font-size: 24px;
+        }
+      }
+      a {
+        display: flex;
+      }
+    }
+  }
+  @include lg {
+    padding: 10px;
+  }
+}
+
+
+
+.shop_table_responsive {
+    thead {
+      display: none;
+    }
+}
+
+#post-7 {
+  width: 100%;
+
+  .woocommerce {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    @include lg {
+        flex-direction: column-reverse;
+        gap: 16px;
+    }
+
+    .woocommerce-notices-wrapper {
+      display: none;
+    }
+  }
+}
+
+.cart_totals {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid #411180;
+  padding: 1rem;
+
+  > h2 {
+    border: 1px solid #411180;
+    padding: 10px;
+  }
+
+  table {
+    tbody {
+      th {
+        padding: 10px;
+        text-align: left;
+      }
+      td {
+        text-align: right;
+        border-bottom: 1px solid #411180;
+      }
+    }
+  }
+  .wc-proceed-to-checkout {
+    width: 100%;
+    display: flex;
+
+    .checkout-button {
+      background-color: #411180;
+      width: 100%;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+
+      &:hover {
+        background-color: #681BCC;
+      }
+
+      &:active {
+        background-color: #340E66;
+      }
+    }
+    .wc-stripe-cart-checkout-container {
+      display: none;
+    }
+  }
+  .actions {
+    .coupon {
+      display: flex;
+      gap: 10px;
+      margin: 10px 0 10px 0;
+      text-align: center;
+
+      > button {
+        text-align: center;
+        padding: 5px 10px;
+        line-height: unset !important;
+        cursor: pointer;
+      }
+    }
+    > button {
+      width: 100%;
+      padding: 10px;
+      background-color: #5B18B3;
+      color: white;
+      line-height: unset !important;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #9E89B3;
+      }
+    }
+  }
+}
+
+#post-8 {
+  display: flex;
+
+  .entry-header {
+    .entry-title {
+      display: none;
     }
   }
 
-  .imgDelete {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    span {
-      a {
-        color: black;
-        font-size: 24px;
-      }
-    }
-    a {
+  .woocommerce-info {
+      display: none;
+  }
+  .woocommerce-form-login {
+    display: none;
+  }
+  .woocommerce-form-coupon-toggle {
+    display: none;
+  }
+  .woocommerce-form-coupon {
+    display: none;
+  }
+  .woocommerce-checkout {
+    >div {
       display: flex;
+      justify-content: center;
+      width: 100%;
+      gap: 16px;
+
+      .col-1 {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .woocommerce-billing-fields {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          >h3 {
+            margin-bottom: 24px;
+          }
+
+          .woocommerce-billing-fields__field-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            p {
+              display: flex;
+              justify-content: space-between;
+
+              label {
+                margin-right: 16px;
+              }
+
+              span.woocommerce-input-wrapper {
+                width: 50%;
+
+                input {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          >p {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            text-align: right;
+
+            label {
+              margin: 0;
+            }
+          }
+        }
+        .woocommerce-account-fields {
+          width: 100%;
+          p {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+          }
+        }
+      }
     }
   }
 }
