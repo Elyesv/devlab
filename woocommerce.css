@@ -1317,196 +1317,136 @@ textarea {
 
 #masthead {
   width: 100%;
-  height: 16vh;
+  height: 12vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   background-color: #1A0733;
   color: white;
 }
-#masthead .site-branding {
-  height: 50px;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-}
-#masthead a {
-  color: white;
-  font: bolder;
-  font-size: 28px;
-  text-decoration: none;
-}
-#masthead a:hover {
-  color: #cbaef0;
-}
-#masthead .menu-header-left-container {
-  width: 22vw;
-  height: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-left: -5vw;
-}
-#masthead .menu-header-left-container ul {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 2vw;
-}
-#masthead .menu-header-left-container ul li {
-  width: 100%;
-  height: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  margin-left: 6vw;
-  margin-right: 35px;
-}
-#masthead .menu-header-left-container ul li a {
-  width: 100%;
-  height: 100%;
-}
-#masthead .rightSide {
+#masthead .headerContainer {
+  z-index: 10;
   width: 60%;
-  height: 50%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-#masthead .rightSide .searchBar {
-  width: 60%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#masthead .rightSide .searchBar .searchZone {
-  width: 22vw;
-  background-color: transparent;
-  border: 0;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-  border-radius: 0;
-  color: white;
-}
-#masthead .rightSide .searchBar .searchZone:focus-visible {
-  outline: none;
-}
-#masthead .rightSide .searchBar button {
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-}
-#masthead .rightSide .menu-header-right-container {
-  width: 20vw;
-  height: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   flex-wrap: wrap;
 }
-#masthead .rightSide .menu-header-right-container ul {
+#masthead .headerContainer .site-branding {
+  height: 75px;
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(http://localhost/devlabb/wp-content/uploads/2022/04/LOGO.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#masthead .headerContainer a {
+  color: white;
+  font: bolder;
+  font-size: 25px;
+  text-decoration: none;
+}
+#masthead .headerContainer a:hover {
+  color: #cbaef0;
+}
+#masthead .headerContainer .menu-header-right-container {
+  margin-bottom: 1%;
+  width: 90%;
+  height: 50%;
+}
+#masthead .headerContainer .menu-header-right-container ul {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 2vw;
-}
-#masthead .rightSide .menu-header-right-container ul :nth-child(1) {
-  width: 50px;
-  height: 50px;
-  width: 100%;
-  height: 50%;
-  display: flex;
   justify-content: space-around;
   align-items: center;
-  list-style: none;
-  margin-left: 1vw;
-  margin-right: 3vw;
 }
-#masthead .rightSide .menu-header-right-container ul :nth-child(1) a {
-  width: 100%;
+#masthead .headerContainer .menu-header-right-container ul :nth-child(4) {
+  margin-left: 5%;
+  transform: scale(1.2);
+}
+#masthead .headerContainer .menu-header-right-container ul li {
+  list-style: none;
+  width: 20%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#masthead .rightSide .menu-header-right-container ul :nth-child(2) {
-  width: 100%;
-  height: 50%;
-  display: flex;
   justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  margin-left: 0vw;
-  margin-right: 3vw;
-}
-#masthead .rightSide .menu-header-right-container ul :nth-child(2) a {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   #masthead {
-    width: 100vw;
+    width: 100%;
+    height: 20vh;
   }
-  #masthead a {
-    font-size: 18px;
+  #masthead .headerContainer {
+    z-index: 10;
+    width: 80%;
   }
-  #masthead .rightSide {
-    margin-right: 0vw;
-    margin-left: 5vw;
+  #masthead .headerContainer .site-branding {
+    height: 75px;
+    width: 75px;
   }
-  #masthead .rightSide .searchBar {
-    width: 70%;
+  #masthead .headerContainer .menu-header-right-container {
+    width: 90%;
   }
-  #masthead .rightSide .searchBar .searchZone {
-    width: 250px;
-  }
-  #masthead .rightSide .searchBar .searchZone ::placeholder {
-    font-size: 16px;
-  }
-  #masthead .rightSide .searchBar button svg {
-    margin-left: -7vw;
-    transform: scale(0.6);
-  }
-  #masthead .rightSide .menu-header-right-container {
-    width: 60%;
-    margin-right: 50px;
-  }
-  #masthead .menu-header-left-container {
-    width: 20%;
-  }
-  #masthead .menu-header-left-container ul {
+  #masthead .headerContainer .menu-header-right-container ul {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 80px;
   }
-  #masthead .menu-header-left-container ul li {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    margin-left: 15px;
-    margin-right: 15px;
+  #masthead .headerContainer .menu-header-right-container ul :nth-child(4) {
+    margin-left: 5%;
+    transform: scale(1.2);
   }
-  #masthead .menu-header-left-container ul li a {
+  #masthead .headerContainer .menu-header-right-container ul li {
+    width: 20%;
+    height: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  #masthead {
     width: 100%;
+    height: 20vh;
+  }
+  #masthead .headerContainer {
+    z-index: 10;
+    width: 90%;
+  }
+  #masthead .headerContainer .site-branding {
+    height: 50px;
+    width: 50px;
+  }
+  #masthead .headerContainer a {
+    color: white;
+    font: bolder;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  #masthead .headerContainer a:hover {
+    color: #cbaef0;
+  }
+  #masthead .headerContainer .menu-header-right-container {
+    width: 90%;
+  }
+  #masthead .headerContainer .menu-header-right-container ul {
+    width: 100%;
+    height: 100%;
+  }
+  #masthead .headerContainer .menu-header-right-container ul :nth-child(4) {
+    margin-left: 5%;
+    transform: scale(1.2);
+  }
+  #masthead .headerContainer .menu-header-right-container ul :nth-child(2) {
+    margin-right: -2%;
+  }
+  #masthead .headerContainer .menu-header-right-container ul :nth-child(3) {
+    width: 25%;
+  }
+  #masthead .headerContainer .menu-header-right-container ul li {
+    width: 10%;
     height: 100%;
   }
 }
@@ -1515,61 +1455,46 @@ textarea {
     width: 100%;
     height: 20vh;
   }
-  #masthead a {
-    font-size: 18px;
-  }
-  #masthead .site-branding {
-    margin-left: 0vw;
-  }
-  #masthead .rightSide {
-    width: 100vw;
-    justify-content: center;
-    margin-right: 0vw;
-    margin-left: 3.5vw;
-    margin-top: -5%;
-  }
-  #masthead .rightSide .searchBar {
-    display: none;
-    visibility: hidden;
-  }
-  #masthead .rightSide .searchBar .searchZone {
-    width: 150px;
-  }
-  #masthead .rightSide .searchBar .searchZone ::placeholder {
-    font-size: 12px;
-  }
-  #masthead .rightSide .menu-header-right-container {
-    width: 60%;
-    margin-right: 20px;
-  }
-  #masthead .menu-header-left-container {
-    margin-top: 2%;
-    width: 20%;
-    margin-left: 2vw;
-    margin-right: 13vw;
-  }
-  #masthead .menu-header-left-container ul {
+  #masthead .headerContainer {
+    z-index: 10;
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0px;
-  }
-  #masthead .menu-header-left-container ul li {
-    width: 100%;
-    height: 50%;
-    display: flex;
     justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    margin-left: 20px;
-    margin-right: 20px;
   }
-  #masthead .menu-header-left-container ul li a {
+  #masthead .headerContainer .site-branding {
+    height: 50px;
+    width: 50px;
+  }
+  #masthead .headerContainer a {
+    color: white;
+    font: bolder;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  #masthead .headerContainer a:hover {
+    color: #cbaef0;
+  }
+  #masthead .headerContainer .menu-header-right-container {
+    width: 70%;
+  }
+  #masthead .headerContainer .menu-header-right-container ul {
     width: 100%;
     height: 100%;
-    font-size: 18px;
+    justify-content: space-between;
+    margin-left: -5%;
+  }
+  #masthead .headerContainer .menu-header-right-container ul :nth-child(4) {
+    margin-left: -5%;
+    transform: scale(1.2);
+  }
+  #masthead .headerContainer .menu-header-right-container ul :nth-child(2) {
+    margin-right: -2%;
+  }
+  #masthead .headerContainer .menu-header-right-container ul :nth-child(3) {
+    width: 35%;
+  }
+  #masthead .headerContainer .menu-header-right-container ul li {
+    width: 10%;
+    height: 100%;
   }
 }
 * {
@@ -1695,7 +1620,7 @@ textarea {
 
 .uknown {
   width: 100%;
-  height: calc(100vh - 148px - 334px);
+  height: calc(100vh - 139px - 334px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1743,6 +1668,166 @@ textarea {
   .bigtitle {
     font-size: 80px;
   }
+}
+
+.u-columns {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  padding: 50px;
+}
+.u-columns .u-column1 {
+  border-right: 1px solid #6e37b7;
+}
+@media screen and (max-width: 800px) {
+  .u-columns .u-column1 {
+    border-right: none;
+    border-bottom: 1px solid #6e37b7;
+  }
+}
+.u-columns .u-column1 a {
+  color: #6e37b7;
+}
+.u-columns .u-column2 {
+  border-left: 1px solid #6e37b7;
+}
+@media screen and (max-width: 800px) {
+  .u-columns .u-column2 {
+    border-left: none;
+    border-top: 1px solid #6e37b7;
+  }
+}
+.u-columns > div {
+  width: 50%;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+.u-columns > div h2 {
+  margin-bottom: 25px;
+}
+.u-columns > div form {
+  width: 80%;
+}
+.u-columns > div form p {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.u-columns > div .woocommerce-privacy-policy-text {
+  font-size: 12px;
+}
+.u-columns > div button {
+  background-color: transparent;
+  color: #6e37b7;
+  border: 1px solid #6e37b7;
+}
+.u-columns > div button:hover {
+  background-color: #6e37b7;
+  color: white;
+}
+.u-columns > div .woocommerce-form-login__rememberme {
+  margin-bottom: 20px;
+}
+
+.widget-area {
+  display: none;
+}
+
+.woocommerce-MyAccount-navigation {
+  padding: 0 20px;
+}
+.woocommerce-MyAccount-navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+}
+.woocommerce-MyAccount-navigation ul li a {
+  padding: 5px 10px;
+  background-color: #80738d;
+  color: white;
+  text-decoration: none;
+}
+.woocommerce-MyAccount-navigation ul li a:hover {
+  background-color: #6e37b7;
+}
+.woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--downloads {
+  display: none;
+}
+
+.woocommerce-MyAccount-content {
+  font-size: 16px;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+.woocommerce-MyAccount-content > p:nth-of-type(1) {
+  font-size: 24px;
+  text-align: center;
+}
+.woocommerce-MyAccount-content a {
+  color: #6e37b7;
+}
+
+.woocommerce-Address-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.woocommerce-orders-table thead th,
+.woocommerce-table--order-details thead th {
+  padding-bottom: 15px;
+}
+.woocommerce-orders-table td,
+.woocommerce-table--order-details td {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.woocommerce-order-details__title {
+  margin-bottom: 25px;
+}
+
+mark {
+  background: #6e37b7;
+  color: white;
+  padding: 0 5px;
+}
+
+.woocommerce-EditAccountForm span {
+  color: #6e37b7;
+}
+.woocommerce-EditAccountForm input {
+  outline: none;
+}
+.woocommerce-EditAccountForm fieldset {
+  border: 2px solid #6e37b7;
+  margin-bottom: 25px;
+}
+.woocommerce-EditAccountForm fieldset legend {
+  text-transform: uppercase;
+  padding: 0 10px;
+  color: #6e37b7;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.woocommerce-EditAccountForm fieldset p {
+  padding: 0 5px;
+}
+.woocommerce-EditAccountForm button {
+  padding: 5px 10px;
+  background-color: #80738d;
+  color: white;
+  text-decoration: none;
+}
+.woocommerce-EditAccountForm button:hover {
+  background-color: #6e37b7;
 }
 
 .containerIndex {
