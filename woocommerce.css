@@ -1596,11 +1596,22 @@ textarea {
   width: 100%;
   gap: 16px;
 }
+@media (max-width: 1024px) {
+  #post-8 .woocommerce-checkout > div {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 #post-8 .woocommerce-checkout > div .col-1 {
   width: 35%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 1024px) {
+  #post-8 .woocommerce-checkout > div .col-1 {
+    width: 80%;
+  }
 }
 #post-8 .woocommerce-checkout > div .col-1 .woocommerce-billing-fields {
   width: 100%;
@@ -1643,6 +1654,105 @@ textarea {
   display: flex;
   width: 100%;
   justify-content: flex-end;
+}
+#post-8 .woocommerce-checkout > div .col-2 {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  #post-8 .woocommerce-checkout > div .col-2 {
+    width: 80%;
+  }
+}
+#post-8 .woocommerce-checkout > div .col-2 .woocommerce-shipping-fields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#post-8 .woocommerce-checkout > div .col-2 .woocommerce-shipping-fields #ship-to-different-address {
+  margin-bottom: 24px;
+}
+#post-8 .woocommerce-checkout > div .col-2 .woocommerce-shipping-fields .woocommerce-shipping-fields__field-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+#post-8 .woocommerce-checkout > div .col-2 .woocommerce-shipping-fields .woocommerce-shipping-fields__field-wrapper p {
+  display: flex;
+  justify-content: space-between;
+}
+#post-8 .woocommerce-checkout > div .col-2 .woocommerce-shipping-fields .woocommerce-shipping-fields__field-wrapper p label {
+  margin-right: 16px;
+}
+#post-8 .woocommerce-checkout > div .col-2 .woocommerce-shipping-fields .woocommerce-shipping-fields__field-wrapper p span.woocommerce-input-wrapper {
+  width: 50%;
+}
+#post-8 .woocommerce-checkout > div .col-2 .woocommerce-shipping-fields .woocommerce-shipping-fields__field-wrapper p span.woocommerce-input-wrapper input {
+  width: 100%;
+}
+#post-8 .woocommerce-checkout > div .col-2 .woocommerce-additional-fields {
+  display: none;
+}
+@media (max-width: 1280px) {
+  #post-8 .woocommerce-checkout #order_review_heading {
+    padding: 0 1%;
+  }
+}
+#post-8 .woocommerce-checkout .woocommerce-checkout-review-order {
+  flex-direction: column-reverse;
+}
+#post-8 .woocommerce-checkout .woocommerce-checkout-review-order .wc_payment_methods {
+  margin-top: 24px;
+  list-style: none;
+}
+#post-8 .woocommerce-checkout .woocommerce-checkout-review-order .wc_payment_methods li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+#post-8 .woocommerce-checkout .woocommerce-checkout-review-order .wc_payment_methods li label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#post-8 .woocommerce-checkout .woocommerce-checkout-review-order .wc_payment_methods li label img {
+  max-width: 150px;
+}
+@media (max-width: 640px) {
+  #post-8 .woocommerce-checkout .woocommerce-checkout-review-order .wc_payment_methods li label img {
+    width: 20%;
+  }
+}
+#post-8 .woocommerce-checkout .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table {
+  list-style: none;
+}
+#post-8 .woocommerce-checkout .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table td, #post-8 .woocommerce-checkout .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table tr, #post-8 .woocommerce-checkout .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table th {
+  text-align: center;
+  border: 1px solid #5B18B3;
+}
+#post-8 .woocommerce-checkout .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table td ul, #post-8 .woocommerce-checkout .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table tr ul, #post-8 .woocommerce-checkout .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table th ul {
+  list-style: none;
+  margin: 10px !important;
+}
+
+@media (max-width: 1280px) {
+  .woocommerce-terms-and-conditions-wrapper {
+    padding: 0 1%;
+  }
+}
+
+@media (max-width: 1280px) {
+  #place_order {
+    margin-left: 1%;
+  }
+}
+
+@media (max-width: 640px) {
+  .wc-stripe-save-source {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=woocommerce.css.map */
