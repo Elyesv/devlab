@@ -1520,6 +1520,7 @@ textarea {
   background-color: #80738d;
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 .woocommerce-MyAccount-navigation ul li a:hover {
   background-color: #6e37b7;
@@ -1536,6 +1537,9 @@ textarea {
 .woocommerce-MyAccount-content > p:nth-of-type(1) {
   font-size: 24px;
   text-align: center;
+}
+.woocommerce-MyAccount-content > p:last-of-type {
+  margin: 0 100px;
 }
 .woocommerce-MyAccount-content a {
   color: #6e37b7;
@@ -1593,9 +1597,48 @@ mark {
   background-color: #80738d;
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 .woocommerce-EditAccountForm button:hover {
   background-color: #6e37b7;
+}
+
+.woocommerce-PaymentMethod {
+  display: flex;
+  align-items: center;
+}
+.woocommerce-PaymentMethod label {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.woocommerce-PaymentMethod label span {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.woocommerce-PaymentMethod label span .wc-stripe-card-icon {
+  width: 150px;
+}
+
+.woocommerce-Payment .form-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.woocommerce-Payment .form-row button {
+  padding: 5px 10px;
+  background-color: #80738d;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.woocommerce-Payment .form-row button:hover {
+  background-color: #6e37b7;
+}
+
+.woocommerce {
+  min-height: calc(100vh - 334px - 106px);
 }
 
 /*# sourceMappingURL=woocommerce.css.map */
