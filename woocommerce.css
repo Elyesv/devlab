@@ -1603,24 +1603,6 @@ mark {
   background-color: #6e37b7;
 }
 
-.woocommerce-PaymentMethod {
-  display: flex;
-  align-items: center;
-}
-.woocommerce-PaymentMethod label {
-  display: flex;
-  flex-direction: column;
-  margin-left: 50px;
-}
-.woocommerce-PaymentMethod label span {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-}
-.woocommerce-PaymentMethod label span .wc-stripe-card-icon {
-  width: 150px;
-}
-
 .woocommerce-Payment .form-row {
   display: flex;
   justify-content: center;
@@ -1635,10 +1617,6 @@ mark {
 }
 .woocommerce-Payment .form-row button:hover {
   background-color: #6e37b7;
-}
-
-.woocommerce {
-  min-height: calc(100vh - 334px - 106px);
 }
 
 /*# sourceMappingURL=woocommerce.css.map */
