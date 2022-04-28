@@ -942,13 +942,17 @@ textarea {
   display: none;
 }
 
+.star-rating {
+  display: none;
+}
+
 .products {
   display: flex;
   justify-content: center;
   gap: 5%;
   width: 70%;
   flex-wrap: wrap;
-  margin-top: 2%;
+  margin-bottom: 40px !important;
 }
 .products li.product {
   width: 20% !important;
@@ -1078,6 +1082,11 @@ textarea {
   align-items: center;
   background-color: #1A0733;
   color: white;
+}
+@media (max-width: 1280px) {
+  #masthead {
+    width: 99%;
+  }
 }
 #masthead .headerContainer {
   z-index: 10;
@@ -1222,7 +1231,7 @@ textarea {
   #masthead .headerContainer a {
     color: white;
     font: bolder;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
   }
   #masthead .headerContainer a:hover {
@@ -1369,7 +1378,7 @@ textarea {
 
 .uknown {
   width: 100%;
-  height: calc(100vh - 139px - 334px);
+  height: calc(100vh - 130px - 334px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1501,6 +1510,7 @@ textarea {
   background-color: #80738d;
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 .woocommerce-MyAccount-navigation ul li a:hover {
   background-color: #6e37b7;
@@ -1517,6 +1527,9 @@ textarea {
 .woocommerce-MyAccount-content > p:nth-of-type(1) {
   font-size: 24px;
   text-align: center;
+}
+.woocommerce-MyAccount-content > p:last-of-type {
+  margin: 0 100px;
 }
 .woocommerce-MyAccount-content a {
   color: #6e37b7;
@@ -1574,9 +1587,30 @@ mark {
   background-color: #80738d;
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 .woocommerce-EditAccountForm button:hover {
   background-color: #6e37b7;
+}
+
+.woocommerce-Payment .form-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.woocommerce-Payment .form-row button {
+  padding: 5px 10px;
+  background-color: #80738d;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.woocommerce-Payment .form-row button:hover {
+  background-color: #6e37b7;
+}
+
+.woocommerce {
+  min-height: calc(100vh - 334px - 106px);
 }
 
 .containerIndex {
@@ -1622,7 +1656,7 @@ mark {
   flex-direction: column;
 }
 .site-secondary-index .container {
-  width: 60vw;
+  width: 65vw;
   height: 80%;
   display: flex;
   justify-content: space-around;
@@ -1645,6 +1679,7 @@ mark {
 }
 .site-secondary-index .container .leftPart .left .textArea {
   margin-top: 10px;
+  padding-left: 10%;
   height: 30%;
   width: 100%;
   display: flex;
@@ -1667,21 +1702,26 @@ mark {
   font-weight: 500;
   color: white;
 }
-.site-secondary-index .container .leftPart .left .image {
+.site-secondary-index .container .leftPart .left a {
   width: 100%;
-  height: 30%;
+  height: 25%;
+}
+.site-secondary-index .container .leftPart .left a .image {
+  width: 100%;
+  height: 100%;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.site-secondary-index .container .leftPart .left .image img {
-  transform: scale(0.8);
+.site-secondary-index .container .leftPart a {
+  height: 80%;
+  width: 100%;
 }
-.site-secondary-index .container .leftPart .image {
+.site-secondary-index .container .leftPart a .image {
   margin-left: 10%;
   width: 100%;
-  height: 80%;
+  height: 100%;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -1702,18 +1742,26 @@ mark {
   justify-content: space-between;
   align-items: center;
 }
-.site-secondary-index .container .rightPart .topContent .image {
-  width: 57%;
+.site-secondary-index .container .rightPart .topContent .image1 {
+  width: 62.5%;
   height: 100%;
-  background-color: white;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding-left: 3%;
+}
+.site-secondary-index .container .rightPart .topContent .image1 .image {
+  width: 100%;
+  height: 100%;
 }
 .site-secondary-index .container .rightPart .topContent .image2 {
-  width: 35%;
+  width: 30%;
   height: 100%;
-  background-color: white;
+  margin-left: 7%;
+}
+.site-secondary-index .container .rightPart .topContent .image2 img {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1725,10 +1773,17 @@ mark {
   justify-content: flex-start;
   align-items: center;
 }
-.site-secondary-index .container .rightPart .bottomContent .image {
+.site-secondary-index .container .rightPart .bottomContent a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.site-secondary-index .container .rightPart .bottomContent a .image {
   background-color: white;
   height: 100%;
-  width: 35%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1771,7 +1826,7 @@ mark {
 @media (max-width: 1024px) {
   .site-secondary-index {
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
     background-color: rgba(95, 10, 192, 0.6);
@@ -1793,6 +1848,17 @@ mark {
     height: 60%;
     padding-bottom: 20px;
   }
+  .site-secondary-index .container .rightPart .topContent {
+    height: 50%;
+    width: 100%;
+  }
+  .site-secondary-index .container .rightPart .topContent a, .site-secondary-index .container .rightPart .topContent .image2 {
+    width: 50%;
+    height: 100%;
+  }
+  .site-secondary-index .container .rightPart .topContent a .image, .site-secondary-index .container .rightPart .topContent .image2 .image {
+    width: 100%;
+  }
   .site-secondary-index .container .rightPart .bottomContent p {
     width: 100%;
     font-size: 12px;
@@ -1800,9 +1866,19 @@ mark {
   .site-secondary-index .container .leftPart {
     width: 80%;
     height: 80%;
+    justify-content: flex-start;
   }
-  .site-secondary-index .container .leftPart .mainImg {
-    transform: scale(0.9);
+  .site-secondary-index .container .leftPart .left .textArea {
+    transform: scale(1.2);
+    width: 65%;
+  }
+  .site-secondary-index .container .leftPart .left a {
+    width: 100%;
+    height: 40%;
+    margin-bottom: 5%;
+  }
+  .site-secondary-index .container .leftPart a {
+    width: 55%;
   }
 }
 @media (max-width: 640px) {
@@ -1812,7 +1888,7 @@ mark {
 
   .site-secondary-index {
     width: 100vw;
-    height: 90vh;
+    height: 80vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
     background-color: rgba(95, 10, 192, 0.6);
@@ -1828,10 +1904,76 @@ mark {
     width: 100%;
     flex-direction: column;
   }
+  .site-secondary-index .container .leftPart {
+    height: 50%;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 5%;
+  }
+  .site-secondary-index .container .leftPart .left {
+    width: 100%;
+    height: 100%;
+  }
+  .site-secondary-index .container .leftPart .left .textArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    transform: scale(0.8);
+    width: 100%;
+  }
+  .site-secondary-index .container .leftPart .left .textArea .p1, .site-secondary-index .container .leftPart .left .textArea .p2 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+  .site-secondary-index .container .leftPart .left .textArea .p2 {
+    margin-top: 3px;
+    text-transform: lowercase;
+  }
+  .site-secondary-index .container .leftPart .left .textArea .p3 {
+    display: none;
+  }
+  .site-secondary-index .container .leftPart .left a {
+    display: none;
+  }
+  .site-secondary-index .container .leftPart a {
+    height: 60%;
+    width: 77%;
+    margin-left: -12%;
+  }
+  .site-secondary-index .container .rightPart .bottomContent a {
+    display: none;
+  }
   .site-secondary-index .container .rightPart .bottomContent p {
     width: 100%;
     font-size: 12px;
+    text-align: center;
   }
+}
+.nf-form-fields-required {
+  display: none;
+}
+
+.nf-error-field-errors {
+  display: none;
+}
+
+.nf-field-element {
+  display: flex;
+  justify-content: center;
+}
+
+#nf-field-8 {
+  width: 50%;
+  background-color: #80738d;
+  color: white;
+  cursor: pointer;
+}
+#nf-field-8:hover {
+  background-color: #6e37b7;
 }
 
 /*# sourceMappingURL=woocommerce.css.map */

@@ -75,6 +75,7 @@
         background-color: #80738d;
         color: white;
         text-decoration: none;
+        cursor: pointer;
         &:hover {
           background-color: #6e37b7;
         }
@@ -94,6 +95,9 @@
   > p:nth-of-type(1) {
     font-size: 24px;
     text-align: center;
+  }
+  > p:last-of-type {
+    margin: 0 100px;
   }
   a {
     color: #6e37b7;
@@ -159,8 +163,49 @@ mark {
     background-color: #80738d;
     color: white;
     text-decoration: none;
+    cursor: pointer;
     &:hover {
       background-color: #6e37b7;
     }
   }
+}
+
+//Payment Methods
+// .woocommerce-PaymentMethod {
+//   display: flex;
+//   align-items: center;
+//   label {
+//     display: flex;
+//     flex-direction: column;
+//     margin-left: 50px;
+//     span {
+//       display: flex;
+//       gap: 15px;
+//       margin-top: 20px;
+//       .wc-stripe-card-icon {
+//         width: 150px;
+//       }
+//     }
+//   }
+// }
+.woocommerce-Payment {
+  .form-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    button {
+      padding: 5px 10px;
+      background-color: #80738d;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        background-color: #6e37b7;
+      }
+    }
+  }
+}
+
+.woocommerce {
+   min-height: calc(100vh - 334px - 106px);
 }
