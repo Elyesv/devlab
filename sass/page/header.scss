@@ -1,288 +1,191 @@
 //HEADER
 #masthead{
   width: 100%;
-  height: 16vh;
+  height: 12vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   background-color: #1A0733;
   color: white;
-  .site-branding{
-    height: 50px;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-
+  @include xl{
+    width: 99%;
   }
-  a{
-    color: white;
-    font: bolder;
-    font-size: 28px;
-    text-decoration: none;
-    &:hover{
-      color: #cbaef0;
-    }
-  }
-  .menu-header-left-container{
-    width: 22vw;
-    height: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: -5vw;
-
-    ul{
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 2vw;
-
-      li{
-        width: 100%;
-        height: 50%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        list-style: none;
-        margin-left: 6vw;
-        margin-right: 35px;
-        a{
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-
-
-  }
-
-  .rightSide{
+  .headerContainer{
+    z-index: 10;
     width: 60%;
-    height: 50%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .searchBar{
-      width: 60%;
-      height: 100%;
+    flex-wrap: wrap;
+    .site-branding{
+      height: 75px;
+      width: 75px;
       display: flex;
-      justify-content: center;
       align-items: center;
-
-      .searchZone{
-        width: 22vw;
-        background-color: transparent;
-        border: 0;
-        border-bottom: 2px solid rgba($color: #FFFF, $alpha: 0.4);
-        border-radius: 0;
-        color: white;
-        &:focus-visible{
-          outline: none;
-        }
-      }
-
-      button{
-        background-color: transparent;
-        border: 0;
-        cursor: pointer;
+      justify-content: center;
+      background-image: url(http://localhost/devlabb/wp-content/uploads/2022/04/LOGO.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    a{
+      color: white;
+      font: bolder;
+      font-size: 25px;
+      text-decoration: none;
+      &:hover{
+        color: #cbaef0;
       }
     }
-
 
     .menu-header-right-container{
-      width: 20vw;
+      margin-bottom: 1%;
+      width: 90%;
       height: 50%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-
       ul{
         width: 100%;
         height: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        margin-left: 2vw;
-
-        :nth-child(1){
-          width: 50px;
-          height: 50px;
-          width: 100%;
-          height: 50%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          list-style: none;
-          margin-left: 1vw;
-          margin-right: 3vw;
-          a{
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
+        :nth-child(4){
+          margin-left: 5%;
+          transform: scale(1.2);
         }
-        :nth-child(2){
-
-          width: 100%;
-          height: 50%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          list-style: none;
-          margin-left: 0vw;
-          margin-right: 3vw;
-          a{
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-        }
-
-      }
-    }
-  }
-
-}
-//END HEADER
-
-//responsive tablette
-@include lg
-{
-  #masthead{
-    width: 100vw;
-    a{
-      font-size: 18px;
-    }
-
-    .rightSide{
-      margin-right: 0vw;
-      margin-left: 5vw;
-      .searchBar{
-        width: 70%;
-        .searchZone{
-          width: 250px;
-          ::placeholder{
-            font-size: 16px;
-          }
-        }
-        button{
-          svg{
-            margin-left: -7vw;
-            transform: scale(0.6);
-          }
-        }
-      }
-      .menu-header-right-container{
-        width: 60%;
-        margin-right: 50px;
-      }
-    }
-    .menu-header-left-container{
-      width: 20%;
-      ul{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0px;
-
         li{
-          width: 100%;
-          height: 50%;
+          list-style: none;
+          width: 20%;
+          height: 100%;
           display: flex;
           justify-content: space-around;
           align-items: center;
-          list-style: none;
-          margin-left: 15px;
-          margin-right: 15px;
-          a{
-            width: 100%;
-            height: 100%;
-          }
         }
       }
-
-
     }
+
   }
 }
-//end responsive tablette
 
-//responsive mobile
-@include sm
-{
+@include xl{
   #masthead{
     width: 100%;
     height: 20vh;
-    a{
-      font-size: 18px;
-    }
-
-    .site-branding{
-      margin-left: 7vw;
-    }
-    .rightSide{
-      width: 100vw;
-      margin-right: 0vw;
-      margin-left: 3vw;
-      .searchBar{
-        width: 100%;
-        margin-left: -10vw;
-        margin-right: -22vw;
-        .searchZone{
-          width: 150px;
-          ::placeholder{
-            font-size: 12px;
-          }
-        }
+    .headerContainer{
+      z-index: 10;
+      width: 80%;
+      .site-branding{
+        height: 75px;
+        width: 75px;
       }
       .menu-header-right-container{
-        width: 60%;
-        margin-right: 20px;
-      }
-    }
-    .menu-header-left-container{
-      width: 20%;
-      margin-right: 25vw;
-      ul{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0px;
-
-        li{
+        width: 90%;
+        ul{
           width: 100%;
-          height: 50%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          list-style: none;
-          margin-left: 40px;
-          margin-right: 40px;
-          a{
-            width: 100%;
+          height: 100%;
+          :nth-child(4){
+            margin-left: 5%;
+            transform: scale(1.2);
+          }
+          li{
+            width: 20%;
             height: 100%;
-            font-size: 18px;
           }
         }
       }
-
-
     }
   }
 }
-//end responsive tablette
+
+@include lg{
+  #masthead{
+    width: 100%;
+    height: 20vh;
+    .headerContainer{
+      z-index: 10;
+      width: 90%;
+      .site-branding{
+        height: 50px;
+        width: 50px;
+      }
+      a{
+        color: white;
+        font: bolder;
+        font-size: 20px;
+        text-decoration: none;
+        &:hover{
+          color: #cbaef0;
+        }
+      }
+      .menu-header-right-container{
+        width: 90%;
+        ul{
+          width: 100%;
+          height: 100%;
+          :nth-child(4){
+            margin-left: 5%;
+            transform: scale(1.2);
+          }
+          :nth-child(2){
+            margin-right: -2%;
+          }
+          :nth-child(3){
+            width: 25%;
+          }
+          li{
+            width: 10%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include sm{
+  #masthead{
+    width: 100%;
+    height: 20vh;
+    .headerContainer{
+      z-index: 10;
+      width: 100%;
+      justify-content: space-around;
+      .site-branding{
+        height: 50px;
+        width: 50px;
+      }
+      a{
+        color: white;
+        font: bolder;
+        font-size: 14px;
+        text-decoration: none;
+        &:hover{
+          color: #cbaef0;
+        }
+      }
+      .menu-header-right-container{
+        width: 70%;
+
+        ul{
+          width: 100%;
+          height: 100%;
+          justify-content: space-between;
+          margin-left: -5%;
+          :nth-child(4){
+            margin-left: -5%;
+            transform: scale(1.2);
+          }
+          :nth-child(2){
+            margin-right: -2%;
+          }
+          :nth-child(3){
+            width: 35%;
+          }
+          li{
+            width: 10%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

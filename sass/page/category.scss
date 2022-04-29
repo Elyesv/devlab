@@ -31,13 +31,17 @@
   display: none;
 }
 
+.star-rating{
+  display: none;
+}
+
 .products {
   display: flex;
   justify-content: center;
   gap: 5%;
   width: 70%;
   flex-wrap: wrap;
-  margin-top: 2%;
+  margin-bottom: 40px !important;
 
   li.product {
     width: 20% !important;

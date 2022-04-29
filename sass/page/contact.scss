@@ -1,0 +1,30 @@
+.nf-form-fields-required{
+  display: none;
+}
+
+.nf-error-field-errors{
+  display: none;
+}
+
+.nf-field-element{
+  display: flex;
+  justify-content: center;
+}
+
+#nf-field-8{
+  width: 50%;
+  background-color: #80738d;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: #6e37b7;
+  }
+}
+
+.nf-response-msg {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: limegreen;
+}

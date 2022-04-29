@@ -12,46 +12,76 @@
  * @package Pour_l\'amour_des_goodies
  */
 
+
+$assos = get_field("association", "options");
+
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+    <div class="containerIndex">
+    <main class="site-main-index">
+        <p>Pour l'amour des goodies</p>
+    </main><!-- #main -->
 
-		<?php
-		if ( have_posts() ) :
+<?php foreach ($assos as $asso){
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+    $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => 5,
+        'product_cat' => $asso['nom'],
+    );
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+    $articles = [];
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+    $loop = new WP_Query( $args );
+    if ( $loop->have_posts() ) {
+        while ( $loop->have_posts() ) : $loop->the_post();
+            array_push($articles, get_permalink(), get_the_post_thumbnail_url());
+        endwhile;
+    }
+    wp_reset_postdata();
 
-			endwhile;
+    ?>
 
-			the_posts_navigation();
+    <div class="site-secondary-index">
+        <div class="container">
+            <div class="leftPart">
+                <div class="left">
+                    <div class="textArea">
+                        <p class="p1">Coup de coeur</p>
+                        <p class="p2"><?= $asso['nom'] ?></p>
+                        <a href="http://localhost/devlab/product-category/<?= $asso['nom'] ?>" class="p3">En voir plus →</a>
+                    </div>
+                    <a href="<?= $articles[0] ?>">
+                        <img class="image" src="<?= $articles[1] ?>"  alt="Article image">
+                    </a>
+                </div>
+                <a href="<?= $articles[2] ?>">
+                    <img class="image" src="<?= $articles[3] ?>" class="mainImg" alt="Main article image">
+                </a>
+            </div>
 
-		else :
+            <div class="rightPart">
+                <div class="topContent">
+                    <a class="image1" href="<?= $articles[4] ?>">
+                        <img class="image" src="<?= $articles[5] ?>" alt="Article image">
+                    </a>
+                    <a class="image2" href="<?= $articles[6] ?>">
+                        <img src="<?= $articles[7] ?>" alt="Article image">
+                    </a>
+                </div>
+                <div class="bottomContent">
+                    <a href="<?= $articles[8] ?>">
+                        <img class="image" src="<?= $articles[9] ?>" alt="Article image">
+                    </a>
+                    <p><?= $asso['description'] ?></p>
+                </div>
+            </div>
+        </div>
+    </div><!-- #main -->
+<?php }
+?>
 
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
