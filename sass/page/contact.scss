@@ -20,3 +20,11 @@
     background-color: #6e37b7;
   }
 }
+
+.nf-response-msg {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: limegreen;
+}
