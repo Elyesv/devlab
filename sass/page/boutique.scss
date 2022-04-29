@@ -1,0 +1,33 @@
+.shop-main{
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  & > a{
+    text-decoration: none;
+    color: black;
+  }
+  &-box{
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+    &-logo{
+      width: 100px;
+    }
+
+    &-name{
+      color: #6E37B7;
+    }
+
+    &-desc{
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
